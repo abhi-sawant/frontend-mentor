@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss","style.css"],"names":[],"mappings":"AAAA,iBACI,QCCJ","file":"style.css","sourcesContent":["*, *::after, *::before {\r\n    margin: 0;\r\n}","*, *::after, *::before {\n  margin: 0;\n}"]}
