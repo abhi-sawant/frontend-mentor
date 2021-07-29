@@ -1,11 +1,65 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./dist/images/favicon-32x32.png">
+  <link rel="stylesheet" href="dist/css/style.css">
+
+  <title>Stats Preview Card</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      color: #ccc;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 69%);
+    }
+  </style>
 </head>
+
 <body>
-    
+
+  <div class="card">
+    <div class="mobile-image-container">
+      <img src="dist/images/image-header-mobile.jpg" alt="" class="image">
+      <div class="filter"></div>
+    </div>
+    <div class="stats">
+      <h2>Get <span class="purple"> insights </span> that help your business grow.</h2>
+      <p class="description">Discover the benefits of data analytics and make better decisions regarding revenue,
+        customer
+        experience, and overall efficiency.</p>
+      <div class="number-container">
+        <div class="numbers">
+          <p class="number">10k+</p>
+          <p class="number-category">companies</p>
+        </div>
+        <div class="numbers">
+          <p class="number">314</p>
+          <p class="number-category">templates</p>
+        </div>
+        <div class="numbers">
+          <p class="number">12M+</p>
+          <p class="number-category">queries</p>
+        </div>
+      </div>
+    </div>
+    <div class="desktop-image-container">
+      <img src="dist/images/image-header-desktop.jpg" alt="" class="image">
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62"
+      target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.linkedin.com/in/abhishek-sawant-075293178/">Abhishek Sawant</a>.
+  </div>
 </body>
+
 </html>
