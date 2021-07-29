@@ -63,7 +63,12 @@ img {
 }
 
 @media (min-width: 600px) {
+    body {
+        height: 100vh;
+    }
     .card {
+        position: relative;
+        top: 10%;
         padding: 0;
         display: grid;
         grid-template-columns: 55% 45%;
