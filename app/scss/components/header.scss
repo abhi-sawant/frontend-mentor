@@ -1,0 +1,17 @@
+@use '../util' as *;
+
+.header {
+    border-bottom: 1px solid var(--grey);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    background: hsl(0, 0%, 98%);
+    h1 {
+        font-family: var(--font-title);
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 0.3em 1em;
+        font-weight: 600;
+        border-inline: 1px solid var(--grey);
+    }
+}

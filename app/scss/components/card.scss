@@ -1,0 +1,97 @@
+@use '../util' as *;
+
+.card {
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .image-container {
+        max-width: 100%;
+        overflow: hidden;
+        // border: 2px solid green;
+        aspect-ratio: 90 / 66;
+        .image {
+            transition: all 0.25s;
+            &:hover {
+                transform: scale(1.025);
+                transition: all 0.25s;
+            }
+        }
+    }
+    .description-container {
+        padding: 1em;
+        background: var(--white);
+        .card-title {
+            font-size: 1.3rem;
+            font-family: var(--font-title);
+            font-weight: 600;
+            margin-bottom: 0.8em;
+        }
+        .languages {
+            font-family: var(--font-title);
+            font-weight: 700;
+            margin-bottom: 0.8em;
+            .html {
+                color: var(--red);
+                margin-right: 0.3em;
+            }
+            .css {
+                color: var(--yellow);
+                margin-right: 0.3em;
+            }
+            .js {
+                color: var(--green);
+            }
+        }
+        .description {
+            font-family: var(--font-body);
+            color: hsl(0, 0%, 40%);
+            font-size: 0.95rem;
+            margin-bottom: 1em;
+        }
+    }
+    .action-buttons {
+        padding: 0 1em;
+        margin-bottom: 1em;
+        .code-button {
+            font-family: var(--font-title);
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--white);
+            background: var(--red);
+            padding: 0.3em 1.3em;
+            border: 2px solid var(--red);
+            border-radius: 100px;
+            margin-right: 1em;
+            transition: all 0.25s;
+            &:hover {
+                color: var(--red);
+                background: none;
+                transition: all 0.25s;
+            }
+        }
+        .preview-button {
+            font-family: var(--font-title);
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--white);
+            background: var(--blue);
+            padding: 0.3em 1.3em;
+            border: 2px solid var(--blue);
+            border-radius: 100px;
+            margin-right: 1em;
+            transition: all 0.25s;
+            &:hover {
+                color: var(--blue);
+                background: none;
+                transition: all 0.25s;
+            }
+        }
+    }
+    @include breakpoint(medium) {
+        margin-bottom: 0;
+    }
+}

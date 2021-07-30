@@ -1,0 +1,17 @@
+@use '../util' as *;
+
+.attribution {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-title);
+    font-size: 0.8rem;
+    color: hsla(208, 25%, 5%, 1);
+    padding: 0.3em 0;
+    background: var(--blue);
+    a {
+        color: hsl(0, 0%, 90%);
+    }
+    @include breakpoint(medium) {
+		margin-top: 2em;
+	}
+}
