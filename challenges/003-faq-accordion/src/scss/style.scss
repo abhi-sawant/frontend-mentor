@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
 /* Box sizing rules */
 *,
 *::before,
@@ -20,8 +22,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -39,7 +41,7 @@ body {
 
 /* Remove text-decoration from a */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* A elements that don't have a class get default styles */
@@ -64,9 +66,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -75,4 +77,181 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+:root {
+  --dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --background-grad: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  --dark-grey-blue: hsl(237, 12%, 33%);
+  --grey-blue: hsl(240, 6%, 50%);
+  --light-grey-blue: hsl(240, 5%, 91%);
+}
+
+.attribution {
+  position: fixed;
+  font-size: 11px;
+  bottom: 0;
+  padding: 0.2em 0;
+  text-align: center;
+  width: 100%;
+  background: white;
+}
+.attribution a {
+  color: var(--dark-blue);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  background: var(--background-grad);
+  font-size: 14px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.main {
+  margin-top: -6em;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 2em;
+  padding-top: 10em;
+  border-radius: 20px;
+}
+
+.vector-container {
+  max-width: 100%;
+  margin: auto auto;
+  text-align: center;
+  .vector-container-mobile {
+    .vector-mobile {
+      position: relative;
+      bottom: -7em;
+      z-index: 11;
+      filter: drop-shadow( 0px 30px 2px rgba(0, 0, 0, .1));
+    }
+  }
+  .vector-container-desktop {
+    display: none;
+  }
+}
+
+.accordion-container {
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--dark-blue);
+    font-weight: 700;
+  }
+  .accordion {
+    border-bottom: 1px solid var(--light-grey-blue);
+    padding-block: 0.8em;
+    .summary {
+      background: white;
+      border: none;
+      width: 100%;
+      text-align: start;
+      color: var(--dark-grey-blue);
+      padding-inline: 0;
+      padding-block: 0.8em;
+      cursor: pointer;
+      &::after {
+        content: url('data:image/svg+xml;charset=UTF-8, <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="white" fill-rule="evenodd"/></svg>');
+        transition: all .25s;
+        float: right;
+      }
+      &:hover {
+        color: var(--soft-red);
+      }
+    }
+    .active {
+      color: var(--dark-blue);
+      font-weight: 700;
+      transition: all .25s;
+      &:hover {
+        color: var(--dark-blue);
+      }
+      &::after {
+        transform: rotate(180deg);
+        transition: all .25s;
+      }
+    }
+    .detail {
+      background: white;
+      color: var(--grey-blue);
+      max-height: 0;
+      overflow: hidden;
+      transition: all .25s;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  body{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0;
+  }
+
+  .vector-container {
+    margin: 0;
+    padding: 0;
+    inset: 0;
+    position: absolute;
+    z-index: 111;
+    top: 25%;
+    left: -25%;
+    .vector-container-mobile {
+      display: none;
+      inset: 0;
+    }
+    .vector-container-desktop {
+      display: inline-block;
+      .vector-desktop {
+        display: inline-block;
+      }
+      .vector-box {
+        position: absolute;
+        z-index: 222;
+        margin-left: -38%;
+        margin-top: 12%;
+      }
+    }
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+    inset: 0;
+    padding: 2em;
+    padding-left: 20em;
+    justify-self: end;
+    margin-right: -8%;
+  }
+
+  .attribution {
+    position: fixed;
+    font-size: 11px;
+    bottom: 0;
+    padding: 0.2em 0;
+    text-align: center;
+    width: 100%;
+    background: white;
+  }
+  .attribution a {
+    color: var(--dark-blue);
+  }
+
 }
