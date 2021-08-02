@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="dist/css/reset.css">
+  <link rel="stylesheet" href="dist/css/style.css">
+  <title>Base Apparel coming soon page</title>
+</head>
+
+<body>
+
+  <section role="main" class="hero">
+    <div class="left-hero">
+      <img src="images/logo.svg" alt="" class="logo">
+      <img src="images/hero-mobile.jpg" alt="" class="hero-mobile">
+      <h1 class="tag-line"> <span class="fw"> We're </span> coming soon</h1>
+      <p class="description">Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <form name="form1" action="#" class="email-field">
+        <input type="email" name="email" placeholder="Email Address" id="email" class="email">
+        <img src="images/icon-error.svg" alt="" class="error" id="err">
+        <button type="submit" class="submit" onclick="ValidateEmail(document.form1.email)">
+          <img src="images/icon-arrow.svg" alt="">
+        </button>
+      </form>
+      <div class="error-message" id="errMsg">Please provide a valid email</div>
+    </div>
+    <div class="right-hero">
+      <img src="images/hero-desktop.jpg" alt="" class="hero-desktop">
+    </div>
+  </section>
+
+  <footer role="footer">
+    <p class="attribution">
+      Challenge by <a
+        href="https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0"
+        target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.linkedin.com/in/abhishek-sawant-075293178/">Abhishek Sawant</a>.
+    </p>
+  </footer>
+
+  <script src="dist/js/script.js"></script>
+</body>
+
+</html>
