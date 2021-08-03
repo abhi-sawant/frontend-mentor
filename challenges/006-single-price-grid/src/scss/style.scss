@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-grey: hsl(204, 43%, 93%);
+    --greyish-blue: hsl(218, 22%, 67%);
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    background-color: var(--light-grey);
+    padding: 2em 0 0 0;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 0.625rem;
+    background: var(--cyan);
+    color: var(--light-grey);
+    padding: 0.3em 0;
+    margin-top: 1em;
+    p {
+        margin-bottom: 0;
+    }
+    a {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto auto;
+    padding: 2em;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.one {
+    grid-area: a;
+    background: white;
+    .title-one {
+        color: var(--cyan);
+    }
+    .tag-line-one {
+        color: var(--bright-yellow);
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .description-one {
+        color: var(--greyish-blue);
+    }
+}
+
+.two {
+    grid-area: b;
+    background: var(--cyan);
+    color: white;
+    .price-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1em;
+    }
+    .price {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .price-line {
+        text-align: start;
+        color: var(--light-grey);
+    }
+    .button-two {
+        width: 100%;
+        padding: 1em 0;
+        margin-top: 1em;
+        background: var(--bright-yellow);
+        border: none;
+        font-weight: 700;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.three {
+    grid-area: c;
+    background: hsl(179, 47%, 53%);
+    .title-three {
+        color: white;
+    }
+    ul {
+        padding-left: 0;
+        .list-items {
+            list-style-type: none;
+            color: var(--light-grey);
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    body{
+        display: flex;
+    }
+    .main {
+        width: 80%;
+        max-width: 1000px;
+        margin: auto;
+        display: grid;
+        align-items: stretch;
+        justify-content: stretch;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "a a"
+            "b c";
+    }
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
