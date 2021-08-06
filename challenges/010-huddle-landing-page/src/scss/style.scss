@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+    --font1: "Open Sans", sans-serif;
+    --font2: "Poppins", sans-serif;
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+.attribution {
+    font-size: 0.625rem;
+    color: var(--soft-magenta);
+    background: white;
+    text-align: center;
+    padding: 0.3em 0;
+    margin-top: 2em;
+    a {
+        color: var(--violet);
+    }
+}
+
+body {
+    background: url("../../images/bg-mobile.svg"), hsl(257, 40%, 49%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: var(--font1);
+    color: white;
+}
+
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.logo {
+    width: 10em;
+    margin: 1em 0;
+}
+
+.image {
+    margin: 2em 0;
+}
+
+.main {
+    text-align: center;
+}
+
+.main-text {
+    color: hsl(0, 0%, 80%);
+    letter-spacing: 0.1em;
+}
+
+.main-tag-line {
+    font-family: var(--font2);
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 0.5em 0;
+}
+
+.main-button {
+    padding: 0.5em 4em;
+    font: var(--font1);
+    color: var(--violet);
+    outline:none;  
+    border-radius: 100px;
+    outline: none;
+    margin: 1em 0;
+    &:hover {
+        background: var(--soft-magenta);
+        color: white;
+    }
+}
+
+.social {
+    text-align: center;
+    .fab {
+        font-size: 1rem;
+        padding: 0.7em;
+        border: 2px solid white;
+        border-radius: 1000px;
+        margin: 1em 0.5em;
+        &:hover {
+            color: var(--soft-magenta);
+            border-color: var(--soft-magenta);
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        background: url('../../images/bg-desktop.svg'), hsl(257, 40%, 49%);
+    }
+    .logo {
+        margin: 3em 0;
+    }
+    .main {
+        text-align: start;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 55% 45%;
+        gap: 3em;
+        align-items: center;
+    }
+    .social {
+        text-align: end;
+    }
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
