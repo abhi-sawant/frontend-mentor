@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+    --font: "Poppins", sans-serif;
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --greyish-blue: hsl(229, 6%, 66%);
+    --very-light-grey: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: var(--font);
+    background: var(--very-light-grey);
+}
+
+.attribution {
+    text-align: center;
+    font-size: 10px;
+    color: var(--greyish-blue);
+    padding: 0.3em 0;
+    margin-top: 2em;
+    a {
+        color: var(--very-dark-blue);
+    }
+}
+
+.container {
+    width: 90%;
+    // max-width: 1000px;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    color: var(--very-dark-blue);
+    font-size: 1.8rem;
+}
+
+.title-1 {
+    font-weight: 200;
+    margin-top: 1em;
+}
+
+.title-2 {
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.description {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    color: var(--greyish-blue);
+    margin-bottom: 3em;
+}
+
+.card {
+    background: white;
+    padding: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    * + * {
+        margin-top: 0.5em;
+    }
+}
+
+.card-title {
+    color: var(--very-dark-blue);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-description {
+    color: var(--greyish-blue);
+}
+
+.image-container {
+    text-align: end;
+    margin-top: 2em;
+}
+
+.card-image {
+    height: 4em;
+}
+
+.card1 {
+    border-top: 5px solid var(--cyan);
+}
+
+.card2 {
+    border-top: 5px solid var(--red);
+}
+
+.card3 {
+    border-top: 5px solid var(--orange);
+}
+
+.card4 {
+    border-top: 5px solid var(--blue);
+}
+
+@media (min-width: 900px) {
+    .description {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            ". b ."
+            "a b d"
+            "a c d"
+            ". c .";
+        gap: 2em;
+        align-items: stretch;
+        justify-content: center;
+    }
+    .card {
+        margin-bottom: 0;
+    }
+    .card-description {
+        font-size: 0.625rem;
+    }
+    .card1 {
+        grid-area: a;
+    }
+    .card2 {
+        grid-area: b;
+    }
+    .card3 {
+        grid-area: c;
+    }
+    .card4 {
+        grid-area: d;
+    }
+}
