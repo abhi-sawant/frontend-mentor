@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+    --font: "Red Hat Display", sans-serif;
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    font-family: var(--font);
+    font-weight: 500;
+    background: url("../../images/pattern-background-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.625rem;
+    width: 100%;
+    text-align: center;
+    color: var(--desaturated-blue);
+    a {
+        color: var(--dark-blue);
+        font-weight: 700;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+}
+
+.non-hero {
+    padding: 2em;
+}
+
+.card-title {
+    color: var(--dark-blue);
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+
+.card-description {
+    margin-bottom: 2.5em;
+    color: var(--desaturated-blue);
+}
+
+.plan {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.price {
+    margin-left: -4em;
+}
+
+.one {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.two {
+    color: var(--desaturated-blue);
+}
+
+.change {
+    color: var(--bright-blue);
+    text-decoration: underline;
+    font-weight: 700;
+    &:hover {
+        color: var(--desaturated-blue);
+        text-decoration: none;
+    }
+}
+
+.proceed {
+    display: block;
+    background: var(--bright-blue);
+    color: white;
+    margin: 2em 0;
+    padding: 1em 0;
+    font-weight: 700;
+    border-radius: 10px;
+    &:hover {
+        background: var(--desaturated-blue);
+    }
+}
+
+.cancel {
+    color: var(--desaturated-blue);
+    font-weight: 900;
+    &:hover {
+        color: var(--dark-blue);
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        background: url("../../images/pattern-background-desktop.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
