@@ -1,0 +1,2 @@
+const notify=document.getElementById("notify"),errMob=document.getElementById("errMob"),email=document.getElementById("email"),errDesk=document.getElementById("errDesk");notify.addEventListener("click",(function(e){e.preventDefault();email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)?(errMob.style.color="white",errDesk.style.color="white"):(errMob.style.color="red",errDesk.style.color="red")}));
+//# sourceMappingURL=script.js.map

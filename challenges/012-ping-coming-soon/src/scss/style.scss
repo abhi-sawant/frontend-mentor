@@ -1,0 +1,137 @@
+:root {
+    --font: 'Libre Franklin', sans-serif;
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --grey: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body {
+    font-family: var(--font);
+}
+
+.attribution {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 2em;
+    a {
+        font-weight: 600;
+        color: var(--very-dark-blue);
+    }
+}
+
+.container {
+    width: 85%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    * + * {
+        margin-top: 1em;
+    }
+}
+
+.logo {
+    margin-top: 2em;
+}
+
+.tag-line {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: var(--grey);
+    margin-bottom: 1em;
+    .bold {
+        font-weight: 700;
+        color: var(--very-dark-blue);
+    }
+}
+
+.email-field {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.email {
+    border: 1px solid var(--pale-blue);
+    padding: 0.8em;
+    width: 90%;
+    border-radius: 100px;
+    &::placeholder {
+        padding: 0 2em;
+        color: var(--grey);
+    }
+}
+
+.error-mobile {
+    color: white;
+    margin: 0;
+}
+
+.notify {
+    display: block;
+    padding: 0.8em;
+    width: 90%;
+    margin:auto;
+    margin-top: 1em;
+    border-radius: 100px;
+    background: var(--blue);
+    color: white;
+    font-weight: 600;
+    &:hover {
+        background: var(--pale-blue);
+    }
+}
+
+.error-desktop {
+    display: none;
+}
+
+.social {
+    .fab {
+        color: var(--blue);
+        font-size: 1rem;
+        margin: 2em 1em;
+        padding: 0.5em;
+        border: 1px solid var(--pale-blue);
+        border-radius: 100px;
+        &:hover {
+            background: var(--blue);
+            border-color: var(--blue);
+            color: white;
+        }
+    }
+}
+
+.copyright {
+    color: var(--grey);
+}
+
+@media (min-width: 800px) {
+    .error-mobile {
+        display: none;
+    }
+
+    .email-field {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 70% 30%;
+        align-items: stretch;
+    }
+
+    .email {
+        margin-right: 0;
+    }
+
+    .notify {
+        margin: 0;
+    }
+
+    .error-desktop {
+        display: block;
+        text-align: start;
+        width: 90%;
+        margin: auto;
+        margin-top: 0;
+        color: white;
+    }
+}
