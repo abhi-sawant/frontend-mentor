@@ -1,0 +1,129 @@
+:root {
+    --font: "Poppins", sans-serif;
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --greyish-blue: hsl(246, 25%, 77%);
+}
+
+.attribution {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 2em;
+    background: white;
+    color: var(--greyish-blue);
+    a {
+        color: var(--blue);
+        font-weight: 600;
+    }
+}
+
+body {
+    font-family: var(--font);
+    background: url("../../images/bg-intro-mobile.png"), var(--red);
+    background-size: cover;
+}
+
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.tag-line {
+    margin: 1em 0;
+}
+
+.description {
+    margin-bottom: 2em;
+}
+
+.price {
+    background: var(--blue);
+    padding: 1em 4em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+    box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.2);
+}
+
+.form1 {
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.2);
+    .field {
+        position: relative;
+        margin-bottom: 1em;
+    }
+    input {
+        border-radius: 5px;
+        width: 100%;
+        border: 1px solid var(--greyish-blue);
+        padding: 1em;
+        &::placeholder {
+            font-weight: 600;
+        }
+    }
+    .err {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        opacity: 0;
+    }
+    .err-msg {
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        text-align: end;
+        color: var(--red);
+    }
+    button {
+        width: 100%;
+        padding: 1em;
+        background: var(--green);
+        border:none;
+        border-radius: 5px;
+        color: white;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 500;
+        border-bottom: 4px solid hsl(154, 59%, 45%);
+        margin-bottom: 1em;
+    }
+    p {
+        font-size: 0.8rem;
+        color: var(--greyish-blue);
+        b {
+            color: var(--red);
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        background: url("../../images/bg-intro-desktop.png"), var(--red);
+        background-size: cover;
+        display: grid;
+    }
+    .container {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        gap: 3em;
+    }
+    .attribution {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+    .tag-line {
+        font-size: 3rem;
+        text-align: start;
+        margin-bottom: 0.4em;;
+    }
+    .description {
+        text-align: start;
+    }
+}

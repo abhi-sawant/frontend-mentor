@@ -4,7 +4,7 @@
     border: 1px solid var(--grey);
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,15 +33,16 @@
         }
         .languages {
             font-family: var(--font-title);
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 0.8em;
+            letter-spacing: 0.1em;
             .html {
                 color: var(--red);
-                margin-right: 0.3em;
+                margin-right: 0.5em;
             }
             .css {
                 color: var(--yellow);
-                margin-right: 0.3em;
+                margin-right: 0.5em;
             }
             .js {
                 color: var(--green);

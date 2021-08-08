@@ -8,8 +8,10 @@
     color: hsla(208, 25%, 5%, 1);
     padding: 0.3em 0;
     background: var(--blue);
+    font-weight: 600;
     a {
         color: hsl(0, 0%, 90%);
+        font-weight: 700;
     }
     @include breakpoint(medium) {
 		margin-top: 2em;
