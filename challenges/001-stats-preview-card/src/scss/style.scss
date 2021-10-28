@@ -28,6 +28,9 @@ img {
         display: inline-block;
         .image {
             border-radius: 15px 15px 0 0;
+            filter: sepia(100%) hue-rotate(160deg);
+            // -webkit-filter: invert(1);
+            // filter: invert(1);
         }
     }
     .stats {
